@@ -14,12 +14,8 @@ ActiveRecord::Schema.define(version: 2022_12_23_070144) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "title"
-    t.integer "user_id"
-    t.integer "tenant_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["tenant_id"], name: "index_businesses_on_tenant_id"
-    t.index ["user_id"], name: "index_businesses_on_user_id"
   end
 
   create_table "tenants", force: :cascade do |t|

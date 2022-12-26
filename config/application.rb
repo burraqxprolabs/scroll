@@ -24,5 +24,3 @@ end
 if ['development', 'test'].include? ENV['RAILS_ENV']
   Dotenv::Railtie.load
 end
-
-HOSTNAME = ENV['HOSTNAME']
