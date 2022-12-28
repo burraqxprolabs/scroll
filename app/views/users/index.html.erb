@@ -39,3 +39,23 @@
     </ul>
   </div>
 </nav>
+
+<button id="linkButton">Open Link - Institution Select</button>
+
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script>
+    var linkHandler = Plaid.create({
+      token: 'link-sandbox-f4a57b6d-39ce-455e-955e-7bb8e5d30509',
+      token: (await $.post('/create_link_token')).link_token,
+      onLoad: function() {
+      },
+      onSuccess: function(public_token, metadata) {
+      },
+      onExit: function(err, metadata) {
+      },
+    });
+
+  document.getElementById('linkButton').onclick = function() {
+    linkHandler.open();
+  };
+</script>
