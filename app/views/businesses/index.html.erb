@@ -1,0 +1,19 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @businesses.each do |business| %>
+        <tr>
+          <td><%= business.title %></td>
+          <td> <button id="linkButton">Open Link - Institution Select</button> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<%= link_to 'New business', new_business_path %>
+

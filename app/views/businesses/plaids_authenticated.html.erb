@@ -1,0 +1,17 @@
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script>
+    var linkHandler = Plaid.create({
+      token: 'link-sandbox-a98ec61a-b81c-4253-82d8-1bbef8457495',
+      onLoad: function() {
+      },
+      onSuccess: function(public_token, metadata) {
+        console.log('Public Token: ' + public_token);
+      },
+      onExit: function(err, metadata) {
+        if (err != null) {
+          console.log(err);
+        }
+      },
+    });
+    linkHandler.open();
+</script>
