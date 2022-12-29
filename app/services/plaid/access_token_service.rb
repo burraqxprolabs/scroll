@@ -11,10 +11,10 @@ module Plaid
     end
 
     def access_token_creater
-      exchange_token_response = client.item.public_token.exchange(@link_token)
+      exchange_token_response = client.item_public_token_exchange(@link_token)
       access_token = exchange_token_response['access_token']
       
-      stripe_response = client.processor.stripe.bank_account_token.create(access_token, '{{ACCOUNT_ID}}')
+      stripe_response = client.processor_stripe_bank_account_token_create(access_token, '{{ACCOUNT_ID}}')
       bank_account_token = stripe_response['stripe_bank_account_token']
       
     end

@@ -41,12 +41,10 @@
 </nav>
 
 <button id="linkButton">Open Link - Institution Select</button>
-
 <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
 <script>
     var linkHandler = Plaid.create({
-      token: 'link-sandbox-f4a57b6d-39ce-455e-955e-7bb8e5d30509',
-      token: (await $.post('/create_link_token')).link_token,
+      token: 'link-development-2e6a0031-4b01-4202-8192-27f958d79649',
       onLoad: function() {
       },
       onSuccess: function(public_token, metadata) {

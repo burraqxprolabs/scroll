@@ -11,7 +11,7 @@ module Plaid
     end
 
     def link_token_creater
-      client_user_id = 'Stripe test'
+      client_user_id = 'Stripe test 2'
 
       link_token_response = client.link_token_create(
         user: {
